@@ -6,7 +6,7 @@ var myfunc = setInterval(function() {
     var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var mins = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
     var secs = Math.floor((timeleft % (1000 * 60 )) / 1000 );
-    // var process = Math.floor((100 - (timeleft / (1000 * 60 * 60 * 24 * 365) * 100)) * 100000) / 100000
+    var process = Math.floor((100 - (timeleft / (1000 * 60 * 60 * 24 * 365) * 100))) 
 
     hours = (hours < 10) ? "0" + hours : hours
     mins = (mins < 10) ? "0" + mins : mins
@@ -16,7 +16,7 @@ var myfunc = setInterval(function() {
     document.getElementById("hours").innerHTML = hours 
     document.getElementById("mins").innerHTML = mins 
     document.getElementById("secs").innerHTML = secs 
-    // document.getElementById("process").innerHTML = "Process: " + process + "%"
+    document.getElementById("proc").innerHTML = process
 
     if (timeleft < 0) {
         clearInterval(myfunc);
@@ -24,7 +24,7 @@ var myfunc = setInterval(function() {
         document.getElementById("hours").innerHTML = 0
         document.getElementById("mins").innerHTML = 0
         document.getElementById("secs").innerHTML = 0
-        // document.getElementById("process").innerHTML = ""
+        document.getElementById("proc").innerHTML = 100
         document.getElementById("end").innerHTML = "TIME'S UP!!!!";
     }
 
