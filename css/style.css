@@ -73,15 +73,15 @@ li span {
 
 @media all and (max-width: 768px) {
     .headline .title {
-      font-size: 1.5rem;
+      font-size: 1rem;
     }
 
     .headline #end {
-        font-size: 1rem;
+        font-size: 0.7rem;
     }
     
     li {
-      font-size: 0.8rem;
+      font-size: 0.6rem;
     }
     
     li span {
